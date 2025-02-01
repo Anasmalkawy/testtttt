@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,28 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void butadd_Click(object sender, EventArgs e)
+        {
+            string file = Server.MapPath("addroomfile.txt");
+            if (!File.Exists(file))
+            {
+                using (StreamWriter s1 = File.CreateText(file))
+                {
+                    s1.WriteLine($"{roomid.Text},{roomname.Text},{roomcapacity.Text},{roomlocation.Text}");
+                }
+            }
+            else
+            {
+                using (StreamWriter s2 = new StreamWriter(file, true))
+                {
+                    s2.WriteLine($"{roomid.Text},{roomname.Text},{roomcapacity.Text},{roomlocation.Text}");
+
+                }
+            }
+
+            Response.Redirect("SeeRoom.aspx");
         }
     }
 }

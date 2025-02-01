@@ -70,7 +70,6 @@
     <Content Include="Admin.aspx" />
     <Content Include="AdminPage.aspx" />
     <Content Include="ReserveRoom.aspx" />
-    <Content Include="roomdata.txt" />
     <Content Include="SeeRoom.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

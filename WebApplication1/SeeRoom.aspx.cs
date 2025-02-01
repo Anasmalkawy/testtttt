@@ -20,7 +20,7 @@ namespace WebApplication1
 
         private void BindRoomData()
         {
-            string roomFile = Server.MapPath("roomdata.txt"); // مسار ملف الغرف
+            string roomFile = Server.MapPath("addroomfile.txt"); // مسار ملف الغرف
             string[] roomData = File.ReadAllLines(roomFile); // قراءة بيانات الغرف
 
             string reservationFile = Server.MapPath("reserveroom.txt"); // مسار ملف الحجوزات
@@ -41,11 +41,12 @@ namespace WebApplication1
                     if (resData[0] == roomID && resData.Length > 4 && resData[4] == "Approved") // إذا كان الحجز معتمدًا
                     {
                         status = "Booked"; // تغيير الحالة إلى Booked
-                                        tableContent += $"<tr><th>{roomLine[0]}</th><td>{roomLine[1]}</td><td>{roomLine[2]}</td><td>{roomLine[3]}</td><td>{status}</td></tr>";
 
                         break;
                     }
                 }
+                tableContent += $"<tr><th>{roomLine[0]}</th><td>{roomLine[1]}</td><td>{roomLine[2]}</td><td>{roomLine[3]}</td><td>{status}</td></tr>";
+
 
                 // إضافة صف جديد إلى الجدول
             }
