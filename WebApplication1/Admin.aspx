@@ -73,25 +73,20 @@
                 <asp:TextBox Style="width: 100%;" class="form-control" ID="roomlocation" runat="server"></asp:TextBox>
             </div>
 
-            <!-- Start Time Input -->
-            <!--
-            <div class="mb-3">
-                <label for="tstart" class="form-label">Time (Start)</label>
-                <asp:TextBox style="width: 100%;" type="time" class="form-control" ID="tstart" runat="server"></asp:TextBox>
-            </div>-->
-
-            <!-- End Time Input -->
-            <!--
-            <div class="mb-3">
-                <label for="tend" class="form-label">Time (End)</label>
-                <asp:TextBox style="width: 100%;" type="time" class="form-control" ID="tend" runat="server"></asp:TextBox>
-            </div>-->
-
-
             <!-- Add Button -->
             <div class="mb-3">
                 <asp:Button ID="butadd" runat="server" OnClick="butadd_Click" Text="Add Room" type="submit" class="btn btn-primary"></asp:Button>
             </div>
+            <div style="text-align:center; margin-top:20px;">
+    <asp:Button ID="btnSeeRoom" runat="server" Text="See Room" PostBackUrl="~/SeeRoom.aspx" />
+    <asp:Button ID="btnReserveRoom" runat="server" Text="Reserve Room" PostBackUrl="~/ReserveRoom.aspx" />
+    <asp:Button ID="btnEdit" runat="server" Text="Edit" PostBackUrl="~/edit.aspx" />
+    <asp:Button ID="btnAdmin" runat="server" Text="Admin" PostBackUrl="~/Admin.aspx" />
+    <asp:Button ID="btnAdminPage" runat="server" Text="Admin Page" PostBackUrl="~/AdminPage.aspx" />
+    <asp:Button ID="btnHome" runat="server" Text="Home" PostBackUrl="~/Default.aspx" />
+    <asp:Button ID="btnLogout" runat="server" Text="Logout" PostBackUrl="~/Logout.aspx" />
+</div>
+
         </div>
     </form>
 </body>

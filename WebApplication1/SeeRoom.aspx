@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeeRoom.aspx.cs" Inherits="WebApplication1.SeeRoom" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,6 +12,7 @@
         body {
             background-color: #f8f9fa; /* Light gray background */
         }
+
         .table-container {
             max-width: 900px;
             margin: 50px auto;
@@ -19,15 +21,18 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .table {
             border-radius: 10px;
             overflow: hidden;
         }
+
         thead {
             background-color: #007bff;
             color: white;
             text-align: center;
         }
+
         tbody tr:hover {
             background-color: #f1f1f1;
         }
@@ -47,13 +52,24 @@
                             <th scope="col">Room Location</th>
                             <th scope="col">Room Capacity</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+
                         </tr>
                     </thead>
                     <tbody id="table1" runat="server">
-
                     </tbody>
                 </table>
             </div>
+            <div style="text-align:center; margin-top:20px;">
+    <asp:Button ID="btnSeeRoom" runat="server" Text="See Room" PostBackUrl="~/SeeRoom.aspx" />
+    <asp:Button ID="btnReserveRoom" runat="server" Text="Reserve Room" PostBackUrl="~/ReserveRoom.aspx" />
+    <asp:Button ID="btnEdit" runat="server" Text="Edit" PostBackUrl="~/edit.aspx" />
+    <asp:Button ID="btnAdmin" runat="server" Text="Admin" PostBackUrl="~/Admin.aspx" />
+    <asp:Button ID="btnAdminPage" runat="server" Text="Admin Page" PostBackUrl="~/AdminPage.aspx" />
+    <asp:Button ID="btnHome" runat="server" Text="Home" PostBackUrl="~/Default.aspx" />
+    <asp:Button ID="btnLogout" runat="server" Text="Logout" PostBackUrl="~/Logout.aspx" />
+</div>
+
         </div>
     </form>
 

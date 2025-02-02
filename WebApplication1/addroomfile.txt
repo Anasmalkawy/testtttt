@@ -1,2 +1,2 @@
-1,abc,20,north
-2,bbbb,40,west
+1,anas,1000,north
+2,malkawy,20,west

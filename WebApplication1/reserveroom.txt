@@ -1,4 +1,1 @@
-1,anas,2025-02-06,20:35,Approved
-2,amal,2025-02-06,23:35,Approved
-3,malkawy,2025-02-11,23:38,Pending
-1,anas,2025-02-12,23:18,Pending
+1,anas@gmail.com,2025-02-14,11:34,Rejected
